@@ -15,4 +15,6 @@ Usage
 Support functions
 =================
 
+- open: open file like builtin function.
+
 - set_encoding: set the encoding used to output Unicode strings.
