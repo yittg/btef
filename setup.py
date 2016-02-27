@@ -16,4 +16,11 @@ setup(
     license='MIT',
     ext_modules=[
         Extension('btef', sources=['src/btefmodule.c']),
-    ])
+    ],
+    classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 2",
+        "Programming Language :: Python :: 2.7",
+        "Topic :: Software Development :: Libraries",
+    ],
+)
