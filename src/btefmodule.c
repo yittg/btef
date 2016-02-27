@@ -11,8 +11,9 @@ open(PyObject *self, PyObject *args, PyObject *kwds)
 
     PyObject* f = NULL;
     PyObject* n_args = NULL;
-    if (!PyArg_ParseTupleAndKeywords(args, kwds, "s|ssi:open",
-                kwlist, &name, &encoding, &mode, &bufsize)) {
+    if (!PyArg_ParseTupleAndKeywords(args, kwds, "et|ssi:open", kwlist,
+                Py_FileSystemDefaultEncoding,
+                &name, &encoding, &mode, &bufsize)) {
         return NULL;
     }
     n_args = Py_BuildValue("ssi", name, mode, bufsize);
