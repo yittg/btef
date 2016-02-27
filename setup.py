@@ -10,7 +10,7 @@ setup(
     author='Yi Tang',
     author_email='ssnailtang@gmail.com',
     version='0.1',
-    description='c extend for file object',
+    description='c extension for file object',
     long_description=readme(),
     url='https://github.com/yittg/btef',
     license='MIT',
