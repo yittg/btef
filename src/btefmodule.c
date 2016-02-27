@@ -17,6 +17,9 @@ open(PyObject *self, PyObject *args, PyObject *kwds)
     }
     n_args = Py_BuildValue("ssi", name, mode, bufsize);
     f = PyObject_Call((PyObject*)&PyFile_Type, n_args, NULL);
+    if (f == NULL) {
+        return NULL;
+    }
     PyFile_SetEncoding(f, encoding);
     return f;
 }
